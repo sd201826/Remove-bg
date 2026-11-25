@@ -1,6 +1,9 @@
 name: Build and deploy Studio ID
 
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
 
 permissions:
@@ -25,6 +28,7 @@ jobs:
           persist-credentials: true
 
       - name: Expand Studio ID source archive
+        if: ${{ hashFiles('.bootstrap/xz-00.b64', '.bootstrap/fix-01-00.b64', '.bootstrap/fix-01-01.b64', '.bootstrap/fix-01-02.b64', '.bootstrap/xz-02.b64', '.bootstrap/xz-03.b64') != '' }}
         shell: bash
         run: |
           set -euo pipefail
