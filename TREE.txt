@@ -1,0 +1,26 @@
+PhotoStudio/
+├── .gitignore
+├── README.md
+├── index.html
+├── package.json
+├── vite.config.js
+└── src/
+    ├── App.jsx
+    ├── main.jsx
+    ├── components/
+    │   ├── AdjustmentsPanel.jsx
+    │   ├── BackgroundPanel.jsx
+    │   ├── EditorCanvas.jsx
+    │   ├── StatusBar.jsx
+    │   ├── TemplateSidebar.jsx
+    │   └── TopToolbar.jsx
+    ├── context/
+    │   └── EditorContext.jsx
+    ├── data/
+    │   └── templates.js
+    ├── styles/
+    │   └── theme.css
+    └── utils/
+        ├── bgRemover.js
+        ├── canvasEngine.js
+        └── imageIO.js
